@@ -266,6 +266,19 @@ button:focus-visible,select:focus-visible,.toggle:focus-visible,a:focus-visible{
 .panel.explain .tipline,.panel.explain .tiplist{display:block}
 .tbtn.explaining{background:linear-gradient(180deg,#cda54c,#9a7830);color:#241b06;border-color:#75581f}
 
+.about p{font-size:10.5px;line-height:1.7;color:var(--slate-soft);margin:0 0 9px}
+.about p:last-of-type{margin-bottom:11px}
+.about b{color:var(--slate);font-weight:600}
+.about a{color:var(--oxblood);text-decoration:underline;text-decoration-color:rgba(142,59,47,.4);text-underline-offset:2px}
+.about a:hover{text-decoration-color:var(--oxblood)}
+.readmore{display:flex;flex-wrap:wrap;gap:6px}
+.readmore a{
+  background:#f6f1e3;border:1px solid #b3a487;border-radius:2px;padding:6px 9px;
+  font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-soft);
+  text-decoration:none;
+}
+.readmore a:hover{color:var(--oxblood);border-color:var(--oxblood)}
+
 .colophon{margin:16px 0 0;border-top:1px solid var(--rule);padding-top:12px}
 .colophon a{
   display:inline-flex;align-items:center;gap:7px;text-decoration:none;
@@ -471,6 +484,27 @@ button:focus-visible,select:focus-visible,.toggle:focus-visible,a:focus-visible{
       <p class="hint" style="margin-top:11px">
         Settings save to this browser automatically. <b>?</b> lists every shortcut.
       </p>
+    </fieldset>
+
+    <fieldset class="sect about">
+      <h3>What is a theremin?</h3>
+      <p>
+        The <b>theremin</b> is the first instrument played without touching it. Two antennas
+        sense where your hands are: the vertical one sets <b>pitch</b>, the horizontal loop sets
+        <b>volume</b>. Two radio oscillators beat against each other and the difference between
+        them is the note you hear — <i>heterodyning</i>.
+      </p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Leon_Theremin" target="_blank" rel="noopener noreferrer">Leon Theremin</a>
+        (Lev Termen) built it in Russia around 1920 and called it the <i>termenvox</i> — "Theremin's voice".
+        <a href="https://en.wikipedia.org/wiki/Clara_Rockmore" target="_blank" rel="noopener noreferrer">Clara Rockmore</a>
+        turned it into a concert instrument. Here your webcam replaces the antennas: by default the
+        right hand takes pitch and the left rides volume, swappable under <b>Gesture</b>.
+      </p>
+      <div class="readmore">
+        <a href="https://en.wikipedia.org/wiki/Theremin" target="_blank" rel="noopener noreferrer">Theremin · Wikipedia</a>
+        <a href="https://en.wikipedia.org/wiki/Heterodyne" target="_blank" rel="noopener noreferrer">Heterodyne</a>
+      </div>
     </fieldset>
 
     <p class="colophon">
