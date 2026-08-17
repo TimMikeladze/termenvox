@@ -1,0 +1,14 @@
+{
+  "name": "termenvox",
+  "version": "1.0.0",
+  "description": "A gesture-controlled theremin for the browser — camera hand tracking, precise tuning, deep synthesis, MIDI out.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test 'test/*.test.mjs'",
+    "dev": "python3 -m http.server 4173",
+    "build": "echo \"static site — nothing to build\""
+  },
+  "keywords": ["theremin", "web-audio", "mediapipe", "hand-tracking", "midi", "synthesizer"],
+  "license": "MIT"
+}
