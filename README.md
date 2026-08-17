@@ -3,9 +3,10 @@
 A gesture-controlled theremin in one HTML file.
 **[termenvox.vercel.app](https://termenvox.vercel.app)**
 
-Wave your hands at the camera to bend pitch and swell volume. No camera? Drag in
-the field, or press <kbd>K</kbd> and play the letter row. Camera frames never
-leave the device.
+Right hand steers pitch across the field, left hand rides volume — lift to
+swell, drop to hush (swappable for left-handed play). No camera? Drag in the
+field, or press <kbd>K</kbd> and play the keyboard piano-style. Camera frames
+are processed on-device and never uploaded.
 
 ## Features
 
@@ -15,9 +16,9 @@ leave the device.
 - **Voice** — two oscillators with interval and detune, sub octave, breath noise,
   drive, filter, vibrato, tremolo, ensemble, ping-pong echo, generated hall
 - **Tracking** — MediaPipe hands with 1€ smoothing, falling back to a built-in
-  blob tracker, then to pointer and keyboard
+  skin-blob tracker, then to pointer and keyboard
 - **MIDI out** — continuous pitch bend and CC11 expression
-- Recording, presets, JSON export/import, and settings that persist
+- Recording, 6 presets, JSON export/import, and settings that persist
 
 Every control explains itself: hover a label, tap it on a phone, or press
 **What's this?** to pin all the descriptions inline.
@@ -36,9 +37,11 @@ npm run dev    # http://localhost:4173 — a server is only needed for camera ac
 npm test
 ```
 
-`index.html` is the whole application. The music maths lives in a dependency-free
-`<script id="tvx-core">` block inside it; `test/core.test.mjs` extracts that block
-and runs it under `node:test`.
+`index.html` is the whole application; deploying it is copying one file. The
+MediaPipe model is the only runtime fetch — without it the blob tracker takes
+over. The music maths lives in a dependency-free `<script id="tvx-core">` block
+inside the page; `test/core.test.mjs` extracts that block and runs it under
+`node:test`.
 
 ## Licence
 
