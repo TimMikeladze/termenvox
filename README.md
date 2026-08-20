@@ -43,6 +43,20 @@ over. The music maths lives in a dependency-free `<script id="tvx-core">` block
 inside the page; `test/core.test.mjs` extracts that block and runs it under
 `node:test`.
 
+## Analytics
+
+Optional, and off unless configured. `npm run build` — the Vercel build command —
+rewrites the `<!-- umami -->` block in `index.html` from the environment:
+
+| Variable | |
+| --- | --- |
+| `UMAMI_WEBSITE_ID` | Enables analytics. Unset means no script is emitted at all. |
+| `UMAMI_SCRIPT_URL` | Instance base URL or full `script.js` path. Defaults to `https://linesofcode-umami.vercel.app/script.js`. |
+| `UMAMI_DOMAINS` | Comma-separated hosts to count, so previews and forks stay out of the stats. |
+
+[Umami](https://umami.is) is cookieless and collects no personal data. The build
+is idempotent, so running it without the variables strips the tag back out.
+
 ## Licence
 
 MIT

@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test 'test/*.test.mjs'",
-    "dev": "python3 -m http.server 4173"
+    "dev": "python3 -m http.server 4173",
+    "build": "node scripts/inject-umami.mjs"
   },
   "keywords": ["theremin", "web-audio", "mediapipe", "hand-tracking", "midi", "synthesizer"],
   "license": "MIT"
